@@ -12,11 +12,7 @@ Route::get('/', function () {
 Route::get('/contact/{id}', function(string $id) {
     $info = 'DIT IS MIJN LINKEDIN: aaaaa';
     return view ('contact', ['id' => $id, 'info' => $info]);
-})->whereNumber('id');
-
-route::get('/contact', function(){
-   return view ('contact');
-})->name('contact');
+})->whereNumber('id')->name('product');
 
 route::resource('/about-us', AboutUsController::class);
 

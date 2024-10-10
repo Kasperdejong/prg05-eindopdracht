@@ -11,7 +11,7 @@
     <section>
         <h1>{{$info}}</h1>
         <p>jouw leukste nummertje is: {{$id}}</p>
-        <a href={{route('product', ['name' => 'cheese'])}}>Ga naar product pagina</a>
+        <a href={{route('product', ['id' => '3'])}}>Ga naar product pagina</a>
     </section>
 </body>
 </html>
