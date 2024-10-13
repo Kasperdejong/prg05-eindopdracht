@@ -11,7 +11,9 @@
     <section>
         <h1>{{$info}}</h1>
         <p>jouw leukste nummertje is: {{$id}}</p>
-        <a href={{route('product', ['id' => '3'])}}>Ga naar product pagina</a>
+        <a href={{route('product', ['id' => '1000'])}}>Ga naar de id=1000 pagina</a>
+        <p>Hieronder mijn favoriete wiki page</p>
+        <a href="https://nl.wikipedia.org/wiki/Lange_Wapper_(reus)">Lange Wapper</a>
     </section>
 </body>
 </html>
