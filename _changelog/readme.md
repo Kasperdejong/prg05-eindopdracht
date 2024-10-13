@@ -1,4 +1,110 @@
- # H1
+## Maandag 14 Oktober
+
+
+
+## Zondag 13 Oktober
+
+User stories: 
+Als gebruiker wil ik objecten kunnen toevoegen op de website 
+Must have (week van 14 okt)
+
+Als gebruiker wil ik kunnen inloggen en mijn profiel kunnen bijhouden
+Must have (week van 14 okt)
+
+Ik wil weten waar de pagina over gaat door middel van een contact page
+Should have (week van 14 okt / of niet)
+
+Ik wil als actieve gebruiker een admin worden van de website met meer 
+rechten dan de normale gebruiker
+Must have (week van 21 okt)
+
+Ik wil kunnen zoeken en filteren binnen alle objecten op de website
+Should have (must voor de opdracht) (week van 14 okt)
+
+Ik wil dat de pagina betrouwbaar en beveiligd is
+Must have (gedurende het project bijhouden)
+
+Ik wil mijn objecten actief en inactief kunnen zetten
+Must have (week van 21 okt)
+
+Ik wil dat de pagina niet voor bots of niet serieuze gebruikers
+kan worden gebruikt, daarom wil ik dat alleen gebruikers die 3
+objecten hebben gemaakt favorieten kunnen toevoegen.
+Must Have (week van 21 okt)
+
+Ik wil dat meerdere mensen online op de site kunnen en ermee
+kunnen werken (week van 21 okt)
+Could have
+
+Ik wil dat SQL-injections niet mogelijk zijn op de website
+Should have (gedurende het project)
+
+Entity Relationship Diagram (ERD)
+![ERD-PRG05-mediasite.png](images/ERD-PRG05-mediasite.png)
+
+
+## Donderdag 10 Oktober
+
+Goede start aan project.
+Opdracht werkend en klaargezet.
+Basic laravel Controllers en view gekoppeld.
+Na vandaag kan ik aan de slag
+
+## Dinsdag 8 Oktober
+
+Andere Frameworks geïnstalleerd en uitgeprobeerd
+Klaar met Ruby on Rails en klein begin CakePHP
+Gewerkt aan projectdossier
+
+## Maandag 7 Oktober
+
+Voor de Laravel praktijk heb ik veel opgezet in phpstorm. Het eerste wat opviel was dit.
+Een error tijdens het maken van het project.
+![Projectaanmaakerror.png](images/Projectaanmaakerror.png)
+Na feedback vragen aan de docent is het mij gelukt om het project goed aan te maken
+door de naam goed mee te geven van het project wat ik wilde maken.
+Ik dacht dat ik een bestaand project nodig had in de map maar dit was niet zo,
+dus ik heb het gefixt en toen kon ik weer verder.
+![projectaanmaaksucces.png](images/projectaanmaaksucces.png)
+
+Ook had ik een klein probleempje met het toevoegen van de database sqlite.
+Ik vroeg of ik de identifier zonder problemen weg kon doen aan antwan en dat was
+zo dus ik heb dit gedaan.
+![isditteveeldatabase.png](images/isditteveeldatabase.png)
+
+Ik heb met de web.php gewerkt en heb mijn project aan de praat gekregen.
+In de terminal heb ik de terminal laten runnen dus ik ben daar erg blij mee!
+![serverrunt.png](images/serverrunt.png)
+
+Voor de rest ging het redelijk goed tot het maken van de controller waar ik een beetje
+moeite mee had maar dat was me uiteindelijk toch gelukt na een vraag aan antwan.
+Ik moest een andere terminal met + aanmaken en het daar invoeren.
+![terminaldoetvreemd.png](images/terminaldoetvreemd.png)
+
+Nu weet ik wel beter hoe web.php werkt en hoe ik daarmee routes naar controllers kan aanroepen.
+Die ik daarna in de browser kan tonen. Ik vond het schrijven van de code wel nog taai,
+omdat ik nog niet weet hoe ik alles precies opschrijf en wat ik moet doen om een resultaat
+te krijgen.
+Maar ik verwacht dat dit beter zal gaan als ik hier meer ervaring mee opdoe in de komende
+programmeer lessen.
+
+
+
+# Hulp bij maken van changelog
+
+Noteer je bevindingen.
+Welke acties heb je ondernomen?
+Noem je bronnen.
+Wat verliep goed? Wat was lastig?
+Wat heb je geleerd?
+Gebruik screenshots om je bevindingen te ondersteunen.
+🗣️ Noteer de feedback die je van je docent hebt gekregen.
+
+
+
+
+
+# H1
   
 hou config dicht hoge kans dat die niet gebruikt hoeft te worden
 en NIKS doen met node_modules. Dit zijn gegenereerde bestanden
