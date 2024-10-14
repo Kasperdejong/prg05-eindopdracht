@@ -1,6 +1,16 @@
 ## Maandag 14 Oktober
 
+Vraag over niet kloppende naam project en github.
+project updaten? push failed op zondag.
+Ik en antwan hebben de fix gevonden op internet. moest iets curl'en de naam maakte niet uit
 
+Feedback over ERD gevraagd. Admin tabel hoefde niet.
+Ik heb een duidelijk onderwerp gekozen en de admins tabel naar genre veranderd en bijgewerkt
+foto van de nieuwe en hopelijk uiteindelijke ERD
+
+![ERD-eindopdracht-prg05.png](images/ERD-eindopdracht-prg05.png)
+
+Verder in de code gewerkt aan x-layout en x-nav
 
 ## Zondag 13 Oktober
 
@@ -106,6 +116,10 @@ Gebruik screenshots om je bevindingen te ondersteunen.
 
 # H1
   
+{{ $slot }} doet AUTOMATISCH HTMLentities, dus beveiling tegen cross side scripting
+
+? : notatie is een if else maar dan CLEAN
+
 hou config dicht hoge kans dat die niet gebruikt hoeft te worden
 en NIKS doen met node_modules. Dit zijn gegenereerde bestanden
 voor de werking van de map.
