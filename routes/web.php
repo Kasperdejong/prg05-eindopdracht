@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -20,6 +21,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+
+Route::resource('/games', GameController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
