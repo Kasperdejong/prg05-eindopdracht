@@ -1,3 +1,13 @@
+## Dinsdag 15 Oktober
+
+Een model aangemaakt.
+Geleerd hoe ik in een database in sqlite info kan opslaan
+informatie opgehaald doormiddel van een foreach loop en getoond
+op de games page.
+Tailwind aan de praat gekregen door het aan te zetten / te linken
+in de layout. Thanks Antwan (dit moest ik vragen)
+Mijn website mooier en overzichtelijker gemaakt.
+
 ## Maandag 14 Oktober
 
 Vraag over niet kloppende naam project en github.
