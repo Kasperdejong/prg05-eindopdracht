@@ -23,6 +23,8 @@ Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 
 Route::resource('/games', GameController::class);
+Route::resource('/genres', GenreController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
