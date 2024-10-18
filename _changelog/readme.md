@@ -1,3 +1,17 @@
+## Vrijdag 18 Oktober
+
+Gezorgd dat ik een genre kan kiezen bij de create page
+en dat de user ook erbij wordt gezet.
+Ik kan nu dingen opslaan in de database en het toont op de site
+
+
+## Donderdag 17 Oktober
+
+Foreign keys toegevoegd aan de games table.
+Ook Genre.php en Game.php aan elkaar gekoppeld door 
+middel van $this->hasMany en $this->belongsTo
+
+
 ## Dinsdag 15 Oktober
 
 Een model aangemaakt.
