@@ -2,7 +2,7 @@
 <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-lg bg-white border border-gray-300 mx-auto">
     <!-- Placeholder Image -->
     <div class="bg-gray-200 h-48 flex items-center justify-center">
-        <img class="h-32 w-32 object-contain" src="{{ $game->image ?? 'https://via.placeholder.com/150' }}" alt="{{ $game->name }}">
+        <img class="h-32 w-32 object-contain" src="{{ $game->image }}" alt="{{ $game->name }}">
     </div>
 
     <div class="p-6">

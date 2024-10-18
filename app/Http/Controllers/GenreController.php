@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Game;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 
-class GameController extends Controller
+class GenreController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $games  = Game::all();
-        //$game->save();
-
-        return view('games', compact('games'));
+        $genres = Genre::all();
+        //zet deze foreach in de view
+        foreach ($genres as $genre){
+            $genre->games();
+        }
     }
 
     /**
@@ -23,8 +24,7 @@ class GameController extends Controller
      */
     public function create()
     {
-        $genres = \App\Models\Genre::all();
-        return view('games.create', compact('genres'));
+        //
     }
 
     /**
@@ -32,20 +32,13 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        $game = new Game();
-        $game->name = $request->input('name');
-        $game->description = $request->input('description') ;
-        $game->image = $request->input('image');
-        $game->link = $request->input('link');
-        $game->genre_id = $request->input('genre_id');
-        $game->user_id = $request->user()->id;
+        $request->validate(['title' => 'required']);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images', 'public');
-            $game->image= $imagePath;
-        }
+        $genre = new Genre();
+        $genre->title = $request->input('title');
+        $genre->save();
 
-        $game->save();
+        return redirect()->route('genres.create');
     }
 
     /**
@@ -53,8 +46,7 @@ class GameController extends Controller
      */
     public function show(string $id)
     {
-        $game = Game::find($id);
-        return view('games.show', compact('game'));
+        //
     }
 
     /**
