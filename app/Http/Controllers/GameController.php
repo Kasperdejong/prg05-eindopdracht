@@ -47,9 +47,10 @@ class GameController extends Controller
         $game->genre_id = $request->input('genre_id');
         $game->user_id = $request->user()->id;
 
-
-
         $game->save();
+
+        return redirect()->route('games.index')->with('success', 'Game created successfully!');
+
     }
 
     /**
