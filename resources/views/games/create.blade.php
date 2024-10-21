@@ -21,8 +21,9 @@
 
                 <!-- Image -->
                 <div class="mb-4">
-                    <label for="image" class="block text-sm font-medium text-gray-700">Game Image</label>
-                    <input type="file" name="image" id="image" class="w-full border border-gray-300 p-2 rounded-md" accept="image/*" required>
+                    <label for="image" class="block text-sm font-medium text-gray-700">{{'image'}}*</label>
+                    <span class="alert-danger">{{ $errors->first('image') }}</span>
+                    <input type="file" name="image" id="image" class="form-control"/>
                 </div>
 
                 <!-- Link -->

@@ -1,3 +1,63 @@
+## Maandag 21 Oktober
+
+Lesopdracht 7.
+Welke Controllers handelen de verschillende onderdelen van de authenticatie af? En waar staan deze?
+- De auth controllers. Deze staan in de app/http/controllers/auth
+
+Zoek uit welke URI's er zijn voor de verschillende onderdelen van de authenticatie. (Gebruik Artisan)
+- php artisan route:list om te kijken waar de register page bijvoorbeeld heen gaat
+
+Waar kan je deze URI's in de code vinden?
+- Meestal zijn de routes aangemaakt onder de resource controller die je terug kan vinden in de php
+route:list controller waarvoor je ook een blade view bestand aan moet maken
+
+Hoe wordt er in de Views onderscheid gemaakt tussen een ingelogde en een niet ingelogde gebruiker?
+- Met @auth()
+  je bent ingelogd trouwens hahaha
+  @endauth()
+  @guest()
+  jij bent niet ingelogd hoe durf je!
+  @endguest()
+
+Hoe wordt er voor gezorgd dat een Guest niet bij /profile kan komen?
+- if (!$request->user() ||
+  ($request->user() instanceof MustVerifyEmail &&
+  !$request->user()->hasVerifiedEmail())) {
+  // reject
+  } In de middleware zet je dit. Zorg dat de email wordt geverifieerd
+
+Hoe is de validatie bij login geregeld? Hoe wordt de oude waarde teruggegeven bij een foutieve invoer?
+
+[//]: # (-         <label for="email">Email</label>)
+
+[//]: # (        <input id="email" type="email" name="email" value="{{ old&#40;'email'&#41; }}" required autofocus>)
+
+[//]: # (        @error&#40;'email'&#41;)
+
+[//]: # (            <span class="text-red-500">{{ $message }}</span>)
+
+[//]: # (        @enderror)
+- met old() kan je je oude waarde teruggeven. 
+
+
+Wat is hierin het verschil met /dashboard en /profile?
+- De profile include ook nog dit @include('profile.partials.update-profile-information-form')
+- En de dashboard geeft alleen maar informatie terug. {{ __("You're logged in!") }}
+
+
+Hoe zijn formulieren beveiligd tegen Cross-Site Request Forgery (CSRF)? Staat dit op 1 plek?
+- Je kan CSRF zetten boven je formulier en dan is de hele pagina gelijk beveiligd
+- @csrf
+
+Wat betekenen de {{ }} rond een variabele in de Views? Is er een alternatief?
+- Dit is hetzelfde als de echo in php maar met dit hoef je php niet aan te roepen
+- EN er wordt gelijk tegen sqlinjection beschermd. Het doet wat htmlentities doet.
+
+Hoe zou je op role kunnen controleren, bijvoorbeeld voor het toelaten van een Admin?
+- geef een role mee aan elke user en als dit niet qua cijfer overeenkomt zijn ze geen admin 
+en worden ze niet toegelaten
+
+
 ## Vrijdag 18 Oktober
 
 Gezorgd dat ik een genre kan kiezen bij de create page
@@ -145,6 +205,8 @@ Gebruik screenshots om je bevindingen te ondersteunen.
 ? : notatie is een if else maar dan CLEAN
 let op je migrations. Als je geen product_id hebt of dat tabel niet
 heb kan je ook geen review table maken waarin je het product_id nodig hebt.
+
+OWASP: Hoe regelt LARAVEL deze security
 
 pas op met cascadeOnDelete, want je kan het niet terugkrijgen.
 maar als je bijvoorbeeld reviews van een verwijderd product wilt wegdoen is het handig.

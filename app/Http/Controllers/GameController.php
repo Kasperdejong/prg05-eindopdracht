@@ -32,18 +32,22 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
+
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'You must be logged in to add a game.');
+        }
+
+        $image = $request->file('image')->storePublicly('games', 'public');
+
         $game = new Game();
         $game->name = $request->input('name');
         $game->description = $request->input('description') ;
-        $game->image = $request->input('image');
         $game->link = $request->input('link');
+        $game->image = $image;
         $game->genre_id = $request->input('genre_id');
         $game->user_id = $request->user()->id;
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images', 'public');
-            $game->image= $imagePath;
-        }
+
 
         $game->save();
     }
