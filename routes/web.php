@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\CheckAdmin;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,8 +33,9 @@ Route::put('/games/{id}', [GameController::class, 'update'])->name('games.update
 
 Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
 
-// ik denk dat ik dit dashboard moet maken
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::middleware(['auth', CheckAdmin::class])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
 
 
 
@@ -41,6 +43,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

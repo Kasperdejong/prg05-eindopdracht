@@ -12,8 +12,11 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    const ROLE_ADMIN = 1;
+    const ROLE_USER = 2;
     /**
      * The attributes that are mass assignable.
+     *
      *
      * @var array<int, string>
      */
@@ -45,8 +48,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function hasRole($role)
+    {
+        return $this->role === (int)$role;
+    }
 
     public function games(){
         return $this->hasMany(Game::class);
     }
 }
+
