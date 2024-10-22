@@ -1,4 +1,17 @@
+## Dinsdag 22 Oktober
+
+OTAP onderzocht
+
+
 ## Maandag 21 Oktober
+
+Gewerkt aan de images in de database krijgen en ze te tonen op de website.
+Dit duurde uiteindelijk vrij lang.
+
+Lesopdrachten gevolgd.
+
+
+
 
 Lesopdracht 7.
 Welke Controllers handelen de verschillende onderdelen van de authenticatie af? En waar staan deze?

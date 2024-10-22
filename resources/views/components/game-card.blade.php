@@ -2,7 +2,7 @@
 <div class="max-w-sm w-full rounded-lg overflow-hidden shadow-lg bg-white border border-gray-300 mx-auto">
     <!-- Image -->
     <div class="bg-gray-200 h-48 flex items-center justify-center">
-        <img class="h-32 w-32 object-contain" src="{{ asset('storage/' . $game->image) }}" alt="{{ $game->name }}">
+        <img class="h-120 w-120 object-fit" src="{{ asset('storage/' . $game->image) }}" alt="{{ $game->name }}">
     </div>
 
     <div class="p-6">
@@ -15,9 +15,10 @@
         </p>
 
         <!-- Game Metadata -->
+
         <div class="text-gray-600 text-sm mb-2">
             <p><strong>User ID:</strong> {{ $game->user_id }}</p>
-            <p><strong>Genre ID:</strong> {{ $game->genre_id }}</p>
+            <p><strong>Genre name:</strong> {{ $game->genre->title }}</p>
         </div>
 
         <!-- Game Link (Placeholder for now) -->
