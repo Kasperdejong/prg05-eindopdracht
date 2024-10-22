@@ -16,7 +16,7 @@
 
                 <!-- Description -->
                 <div class="mb-4">
-                    <textarea name="description" id="description" rows="4" class="w-full border border-gray-300 p-2 rounded-md" ></textarea>
+                    <textarea name="description" id="description" rows="4" class="w-full border border-gray-300 p-2 rounded-md" >{{ old('description') }}</textarea>
                     <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
                     <span class="alert-danger">{{ $errors->first('description') }}</span>
                 </div>

@@ -30,5 +30,14 @@
         <a href="{{route('games.show', $game)}}" class="block bg-indigo-500 text-white text-center py-2 rounded-md hover:bg-indigo-600 transition duration-200">
             View Details
         </a>
+
+        <form action="{{ route('games.destroy', $game->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this game?');">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                Delete
+            </button>
+        </form>
+
     </div>
 </div>

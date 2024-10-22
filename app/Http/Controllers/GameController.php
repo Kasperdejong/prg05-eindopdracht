@@ -90,6 +90,10 @@ class GameController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $game = Game::findOrFail($id);
+
+        $game->delete();
+
+        return redirect()->route('games.index')->with('success', 'Game deleted successfully!');
     }
 }
