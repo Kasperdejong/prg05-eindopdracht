@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\HomeController;
@@ -30,6 +31,10 @@ Route::get('/games/{id}/edit', [GameController::class, 'edit'])->name('games.edi
 Route::put('/games/{id}', [GameController::class, 'update'])->name('games.update');
 
 Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
+
+// ik denk dat ik dit dashboard moet maken
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
 
 
 

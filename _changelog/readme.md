@@ -1,5 +1,8 @@
 ## Dinsdag 22 Oktober
 
+Delete functionaliteit toegevoegd aan mijn gamespage
+Edit functionaliteit toegevoegd aan mijn gamespage
+
 OTAP onderzocht
 
 

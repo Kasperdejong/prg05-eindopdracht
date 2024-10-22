@@ -12,7 +12,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        $games  = Game::all();
+        $games = Game::all();
         //$game->save();
 
         return view('games', compact('games'));
