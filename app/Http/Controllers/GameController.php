@@ -74,7 +74,9 @@ class GameController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $game = Game::find($id);
+        $genres = \App\Models\Genre::all();
+        return view('games.edit', compact( 'game', 'genres'));
     }
 
     /**
@@ -82,8 +84,38 @@ class GameController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
-    }
+        $game = Game::find($id);
+        // Ensure the user is logged in
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'You must be logged in to update a game.');
+        }
+
+        // Validate the incoming request
+        $request->validate([
+            'name' => ['required', 'string', 'max:50'],
+            'description' => ['string', 'max:255'],
+            'link' => ['string', 'max:255'],
+            'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,gif,svg', 'max:2048'],
+            'genre_id' => ['required', 'exists:genres,id'],
+        ]);
+
+        // If a new image is uploaded, store it
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->storePublicly('games', 'public');
+            $game->image = $image;
+        }
+
+        $game->name = $request->input('name');
+        $game->description = $request->input('description');
+        $game->link = $request->input('link');
+        $game->genre_id = $request->input('genre_id');
+        $game->user_id = $request->user()->id;
+
+        // Save the updated game
+        $game->save();
+
+        // Redirect with success message
+        return redirect()->route('games.index')->with('success', 'Game updated successfully!');    }
 
     /**
      * Remove the specified resource from storage.
