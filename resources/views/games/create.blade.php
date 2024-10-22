@@ -10,17 +10,20 @@
                 <!-- Name -->
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700">Game Name</label>
-                    <input type="text" name="name" id="name" class="w-full border border-gray-300 p-2 rounded-md" required>
+                    <span class="alert-danger">{{ $errors->first('name') }}</span>
+                    <input type="text" name="name" id="name" class="w-full border border-gray-300 p-2 rounded-md" value="{{ old('name') }}">
                 </div>
 
                 <!-- Description -->
                 <div class="mb-4">
+                    <textarea name="description" id="description" rows="4" class="w-full border border-gray-300 p-2 rounded-md" ></textarea>
                     <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-                    <textarea name="description" id="description" rows="4" class="w-full border border-gray-300 p-2 rounded-md" required></textarea>
+                    <span class="alert-danger">{{ $errors->first('description') }}</span>
                 </div>
 
                 <!-- Image -->
                 <div class="mb-4">
+                    <p>Let op dat de image niet te groot is anders lukt het niet</p>
                     <label for="image" class="block text-sm font-medium text-gray-700">{{'image'}}*</label>
                     <span class="alert-danger">{{ $errors->first('image') }}</span>
                     <input type="file" name="image" id="image" class="form-control"/>
@@ -29,12 +32,14 @@
                 <!-- Link -->
                 <div class="mb-4">
                     <label for="link" class="block text-sm font-medium text-gray-700">Game Link</label>
-                    <input type="url" name="link" id="link" class="w-full border border-gray-300 p-2 rounded-md" required>
+                    <span class="alert-danger">{{ $errors->first('link') }}</span>
+                    <input type="url" name="link" id="link" class="w-full border border-gray-300 p-2 rounded-md">
                 </div>
 
                 <!-- Genre ID (Dropdown) -->
                 <div class="mb-4">
                     <label for="genre_id" class="block text-sm font-medium text-gray-700">Genre</label>
+                    <span class="alert-danger">{{ $errors->first('genre') }}</span>
                     <select name="genre_id" id="genre_id" class="w-full border border-gray-300 p-2 rounded-md" required>
                         <option value="" disabled selected>Select Genre</option>
                         @foreach($genres as $genre)

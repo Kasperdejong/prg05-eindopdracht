@@ -37,6 +37,13 @@ class GameController extends Controller
             return redirect()->route('login')->with('error', 'You must be logged in to add a game.');
         }
 
+        $request->validate([
+            'name' => ['required', 'string', 'max:50'],
+            'description' => ['string', 'max:255'],
+            'link' => ['string', 'max:255'],
+            'image' => ['required'],
+        ]);
+
         $image = $request->file('image')->storePublicly('games', 'public');
 
         $game = new Game();

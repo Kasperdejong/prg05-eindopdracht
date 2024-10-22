@@ -21,12 +21,12 @@
             <p><strong>Genre name:</strong> {{ $game->genre->title }}</p>
         </div>
 
-        <!-- Game Link (Placeholder for now) -->
+        <!-- Game Link -->
         <a href="{{ $game->link ?? '#' }}" target="_blank" class="text-indigo-500 hover:underline text-sm block mb-4">
             Visit Game Page
         </a>
 
-        <!-- Details Button (Placeholder for now) -->
+        <!-- Details Button -->
         <a href="{{route('games.show', $game)}}" class="block bg-indigo-500 text-white text-center py-2 rounded-md hover:bg-indigo-600 transition duration-200">
             View Details
         </a>

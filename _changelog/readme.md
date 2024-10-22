@@ -11,8 +11,6 @@ Dit duurde uiteindelijk vrij lang.
 Lesopdrachten gevolgd.
 
 
-
-
 Lesopdracht 7.
 Welke Controllers handelen de verschillende onderdelen van de authenticatie af? En waar staan deze?
 - De auth controllers. Deze staan in de app/http/controllers/auth
@@ -212,6 +210,9 @@ Gebruik screenshots om je bevindingen te ondersteunen.
 
 
 # H1
+
+MAAK ROLE 1 ADMIN in de database. ALLEEN IK MAG KIEZEN WIE ADMIN IS.
+standaard user is 2 en die kan dit niet.
   
 {{ $slot }} doet AUTOMATISCH HTMLentities, dus beveiling tegen cross side scripting
 
