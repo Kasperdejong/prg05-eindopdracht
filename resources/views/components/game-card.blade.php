@@ -17,7 +17,7 @@
         <!-- Game Metadata -->
 
         <div class="text-gray-600 text-sm mb-2">
-            <p><strong>User ID:</strong> {{ $game->user_id }}</p>
+            <p><strong>Made by:</strong> {{ $game->user->name }}</p>
             <p><strong>Genre name:</strong> {{ $game->genre->title }}</p>
         </div>
 

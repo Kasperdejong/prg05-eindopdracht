@@ -3,6 +3,9 @@
 Admin game pagina toegevoegd
 Nu kunnen items uit en aan gezet worden via de admin.games page
 
+Filter toegevoegd aan mijn pagina.
+Nu kan ik items tonen op basis van genre_id op de games page.
+
 
 ## Dinsdag 22 Oktober
 
