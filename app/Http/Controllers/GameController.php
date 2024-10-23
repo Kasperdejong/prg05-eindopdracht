@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -13,9 +14,8 @@ class GameController extends Controller
     public function index()
     {
         $games = Game::where('active', 1)->get();
-        //$game->save();
-
-        return view('games', compact('games'));
+        $genres = Genre::all();
+        return view('games', compact('games', 'genres'));
     }
 
     /**
@@ -128,4 +128,17 @@ class GameController extends Controller
 
         return redirect()->route('games.index')->with('success', 'Game deleted successfully!');
     }
+    public function filterByGenre($genre_id)
+    {
+        // Retrieve all games where the genre_id matches the passed ID
+        $games = Game::where('genre_id', $genre_id)->get();
+
+        // Pass the filtered games and all genres to the view
+        $genres = Genre::all();
+
+        return view('games', compact('games', 'genres'));
+    }
+
 }
+
+

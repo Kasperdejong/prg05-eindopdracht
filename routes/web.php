@@ -31,6 +31,8 @@ Route::resource('/genres', GenreController::class);
 Route::get('/games/{id}/edit', [GameController::class, 'edit'])->name('games.edit');
 Route::put('/games/{id}', [GameController::class, 'update'])->name('games.update');
 
+Route::get('/games/genre/{id}', [GameController::class, 'filterByGenre'])->name('games.filter');
+
 Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
 
 Route::middleware(['auth', CheckAdmin::class])->group(function () {

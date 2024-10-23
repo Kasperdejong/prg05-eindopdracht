@@ -6,7 +6,7 @@
         <table class="min-w-full bg-white border">
             <thead>
             <tr>
-                <th class="px-4 py-2 border">Name</th>
+                <th class="px-4 py-2 border">Game name</th>
                 <th class="px-4 py-2 border">User</th>
                 <th class="px-4 py-2 border">Active</th>
                 <th class="px-4 py-2 border">Actions</th>

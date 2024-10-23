@@ -16,9 +16,11 @@
     </x-navlink>
 
     @auth()
-    <x-navlink href="{{route('admin.index')}}" :active="request()->is('admin')" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
-        Admin
-    </x-navlink>
+        @if (auth()->user()->role === 1)
+            <x-navlink href="{{ route('admin.index') }}" :active="request()->is('admin')" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                Admin
+            </x-navlink>
+        @endif
     @endauth
 </nav>
 
