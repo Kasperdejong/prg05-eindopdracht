@@ -1,3 +1,9 @@
+## Woensdag 23 Oktober
+
+Admin game pagina toegevoegd
+Nu kunnen items uit en aan gezet worden via de admin.games page
+
+
 ## Dinsdag 22 Oktober
 
 Delete functionaliteit toegevoegd aan mijn gamespage

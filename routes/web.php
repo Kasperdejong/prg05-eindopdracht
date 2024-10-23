@@ -35,7 +35,10 @@ Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.de
 
 Route::middleware(['auth', CheckAdmin::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/games', [AdminController::class, 'manageGames'])->name('admin.games');
 });
+Route::patch('/admin/games/{game}/toggleActive', [AdminController::class, 'toggleActive'])->name('admin.toggleActive');
+
 
 
 

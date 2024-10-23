@@ -9,6 +9,10 @@
                     </div>
                 @endif
             </div>
+
+   <x-navlink href="{{route('admin.games')}}" :active="request()->is('admin')" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                    Monitor games
+   </x-navlink>
         </div>
     </x-layout>
 </x-app-layout>

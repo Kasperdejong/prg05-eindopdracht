@@ -8,7 +8,9 @@
                     Create New Game
                 </a>
             @foreach($games as $game)
+                    @if($game->active)
                     <x-game-card :game="$game" />
+                    @endif
                 @endforeach
             </div>
         </div>
