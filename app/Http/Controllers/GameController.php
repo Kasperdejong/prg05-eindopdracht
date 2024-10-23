@@ -100,7 +100,13 @@ class GameController extends Controller
     {
         $game = Game::find($id);
         $genres = \App\Models\Genre::all();
+
+        if ($game->user_id !== auth()->id()) {
+            return redirect()->route('games.index')->with('error', 'Je mag dit item niet bewerken.');
+        }
         return view('games.edit', compact( 'game', 'genres'));
+
+
     }
 
     /**
@@ -110,6 +116,10 @@ class GameController extends Controller
     {
         $game = Game::find($id);
         // Ensure the user is logged in
+        if ($game->user_id !== auth()->id()) {
+            return redirect()->route('games.index')->with('error', 'Dit item is niet van jou. Je mag het niet bewerken');
+        }
+
         if (!auth()->check()) {
             return redirect()->route('login')->with('error', 'You must be logged in to update a game.');
         }
@@ -147,6 +157,10 @@ class GameController extends Controller
     public function destroy(string $id)
     {
         $game = Game::findOrFail($id);
+
+        if ($game->user_id !== auth()->id()) {
+            return redirect()->route('games.index')->with('error', 'Dit item is niet van jou. Je mag het niet bewerken');
+        }
 
         $game->delete();
 
