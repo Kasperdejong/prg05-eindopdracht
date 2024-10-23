@@ -30,7 +30,7 @@
         <a href="{{route('games.show', $game)}}" class="block bg-indigo-500 text-white text-center py-2 rounded-md hover:bg-indigo-600 transition duration-200">
             View Details
         </a>
-
+        
         <a href="{{route('games.edit', $game)}}" class="block bg-indigo-500 text-white text-center py-2 rounded-md hover:bg-indigo-600 transition duration-200">
             Edit game info
         </a>
