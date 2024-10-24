@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AboutUsController extends Controller {
+class SecretController extends Controller
+{
     public function index(){
         $userGamesCount = auth()->user()->games()->count();
-        return view('about-us', compact('userGamesCount'));
+        return view('gamefanaticpage', compact('userGamesCount'));
     }
 }

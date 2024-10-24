@@ -7,6 +7,7 @@ use App\Http\Controllers\GenreController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SecretController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckAdmin;
 
@@ -35,11 +36,16 @@ Route::get('/games/genre/{id}', [GameController::class, 'filterByGenre'])->name(
 
 Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
 
-Route::middleware(['auth', CheckAdmin::class])->group(function () {
+Route::middleware(['auth', 'check-admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/admin/games', [AdminController::class, 'manageGames'])->name('admin.games');
 });
 Route::patch('/admin/games/{game}/toggleActive', [AdminController::class, 'toggleActive'])->name('admin.toggleActive');
+
+Route::middleware('check-user-games-count')->group(function () {
+    Route::get('/gamefanaticpage', [SecretController::class, 'index'])->name('gamefanaticpage');
+});
+
 
 
 Route::get('/dashboard', function () {

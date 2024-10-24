@@ -32,6 +32,9 @@ class GameController extends Controller
             });
         }
 
+
+
+
         if ($request->filled('genre_id')) {
             $gameQuery->where('genre_id', $request->input('genre_id'));
         }
@@ -39,6 +42,8 @@ class GameController extends Controller
         $games = $gameQuery->get();
 
         return view('games', compact('games', 'genres'));
+
+
 
     }
 

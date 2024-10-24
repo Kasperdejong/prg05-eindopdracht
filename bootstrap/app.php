@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\CheckAdmin;
+use App\Http\Middleware\CheckUserGamesCount;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -13,7 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
 
-        $middleware->alias((array)'check-admin', \App\Http\Middleware\CheckAdmin::class);
+        $middleware->alias(['check-admin' => \App\Http\Middleware\CheckAdmin::class]);
+        $middleware->alias(['check-user-games-count' => \App\Http\Middleware\CheckUserGamesCount::class]);
 
     })
     ->withExceptions(function (Exceptions $exceptions) {

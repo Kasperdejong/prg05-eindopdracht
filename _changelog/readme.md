@@ -4,7 +4,9 @@ Admin game pagina toegevoegd
 Nu kunnen items uit en aan gezet worden via de admin.games page
 
 Filter toegevoegd aan mijn pagina.
-Nu kan ik items tonen op basis van genre_id op de games page.
+Nu kan ik items tonen op basis van genre_id, naam, description en user op de games page.
+
+Ook edit page en delete button beveiligd tegen intenties van andere users.
 
 
 ## Dinsdag 22 Oktober
@@ -222,6 +224,8 @@ Gebruik screenshots om je bevindingen te ondersteunen.
 
 
 # H1
+
+3 of meer posts voor diepere validatie
 
 MAAK ROLE 1 ADMIN in de database. ALLEEN IK MAG KIEZEN WIE ADMIN IS.
 standaard user is 2 en die kan dit niet.

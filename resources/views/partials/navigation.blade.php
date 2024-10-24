@@ -21,6 +21,12 @@
                 Admin
             </x-navlink>
         @endif
+
+                @if (auth()->user()->checkGameCount() >= 3)
+                    <x-navlink href="{{ route('gamefanaticpage') }}" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
+                        Secret Page
+                    </x-navlink>
+                @endif
     @endauth
 </nav>
 

@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        $userGamesCount = auth()->user()->games()->count();
+        return view('home', compact('userGamesCount'));
     }
 
     /**
