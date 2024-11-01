@@ -1,4 +1,11 @@
-## Woensdag 23 Oktober
+## Vrijdag 1 November
+
+Bootstrap carousel toegevoegd aan de homepage.
+Alle websites mooi gemaakt en gezorgd dat veel van de errors weg zijn voor de eindgebruiker
+alle test data uit de database verwijderd en gezorgd dat de gamepage er voor de laatste dag mooi uit ziet
+
+
+## Woensdag 30 Oktober
 
 De site een beetje opgefrisd en gewerkt aan styling van de pages
 

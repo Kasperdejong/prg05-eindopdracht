@@ -5,11 +5,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SecretController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckAdmin;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,8 +24,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
-Route::get('/products', [ProductController::class, 'index'])->name('products');
-
 Route::resource('/games', GameController::class);
 Route::resource('/genres', GenreController::class);
 
@@ -36,9 +34,11 @@ Route::get('/games/genre/{id}', [GameController::class, 'filterByGenre'])->name(
 
 Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
 
-Route::middleware(['auth', 'check-admin'])->group(function () {
+Route::middleware([CheckAdmin::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/admin/games', [AdminController::class, 'manageGames'])->name('admin.games');
+    Route::get('/admin/users', [AdminController::class, 'showAllUsers'])->name('admin.users');
+
 });
 Route::patch('/admin/games/{game}/toggleActive', [AdminController::class, 'toggleActive'])->name('admin.toggleActive');
 

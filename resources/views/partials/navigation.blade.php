@@ -7,10 +7,6 @@
         About Us
     </x-navlink>
 
-    <x-navlink href="{{route('products')}}" :active="request()->is('products')" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
-        Products
-    </x-navlink>
-
     <x-navlink href="{{route('games.index')}}" :active="request()->is('games')" class="text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200">
         Games
     </x-navlink>

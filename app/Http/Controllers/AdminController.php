@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,6 +24,12 @@ class AdminController extends Controller {
         $game->save();
 
         return redirect()->route('admin.games')->with('success', 'Game status updated!');
+    }
+
+    public function showAllUsers()
+    {
+        $users = User::all();
+        return view('admin.users', compact('users'));
     }
 }
 
