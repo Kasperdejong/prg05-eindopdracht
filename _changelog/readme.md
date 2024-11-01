@@ -1,5 +1,19 @@
 ## Woensdag 23 Oktober
 
+De site een beetje opgefrisd en gewerkt aan styling van de pages
+
+
+## Donderdag 23 Oktober
+
+
+Gezorgd dat de diepere validatie in de page zit.
+Ik moet nu 3 games aanmaken voordat een hidden link tevoorschijn 
+komt waar je ook alleen in mag als je 3 games hebt gemaakt .
+Dit heb ik gedaan doormiddel van middleware
+
+
+## Woensdag 23 Oktober
+
 Admin game pagina toegevoegd
 Nu kunnen items uit en aan gezet worden via de admin.games page
 
