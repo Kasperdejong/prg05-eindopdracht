@@ -24,6 +24,14 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
+        <div class="mt-4 text-center">
+            <p class="text-white">Don't have an account? <a href="{{ route('register') }}" class="text-blue-500 hover:underline">Register here</a></p>
+        </div>
+
+        <div class="mt-4 text-center">
+            <p class="text-white">Want to browse without logging in?<a href="{{ route('home') }}" class="text-blue-500 hover:underline">Homepage</a></p>
+        </div>
+
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">

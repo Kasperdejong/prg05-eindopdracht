@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class AboutUsController extends Controller {
     public function index(){
-        $userGamesCount = auth()->user()->games()->count();
+        $userGamesCount = 0;
+
+        if (auth()->check()) {
+            $userGamesCount = auth()->user()->games()->count();
+        }
         return view('about-us', compact('userGamesCount'));
     }
 }

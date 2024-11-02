@@ -15,11 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact/{id}', function(string $id) {
-    $info = 'DIT IS MIJN LINKEDIN: aaaaa';
-    return view ('contact', ['id' => $id, 'info' => $info]);
-})->whereNumber('id')->name('product');
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
@@ -57,6 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/games', [AdminController::class, 'manageGames'])->name('admin.games');
+    Route::get('/admin/users', [AdminController::class, 'showAllUsers'])->name('admin.users');
+    Route::get('/gamefanaticpage', [SecretController::class, 'index'])->name('gamefanaticpage');
 });
 
 require __DIR__.'/auth.php';

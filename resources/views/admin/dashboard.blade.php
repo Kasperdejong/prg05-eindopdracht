@@ -11,11 +11,11 @@
             </div>
 
             <div class="mt-6 space-y-4">
-                <x-navlink href="{{ route('admin.games') }}" :active="request()->is('admin')" class="block text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200 px-4 py-2 border rounded-md">
+                <x-navlink href="{{ route('admin.games') }}" :active="request()->is('admin')" class="block text-lg no-underline font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200 px-4 py-2 border rounded-md">
                     Monitor Games
                 </x-navlink>
 
-                <x-navlink href="{{ route('admin.users') }}" :active="request()->is('admin')" class="block text-lg font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200 px-4 py-2 border rounded-md">
+                <x-navlink href="{{ route('admin.users') }}" :active="request()->is('admin')" class="block text-lg no-underline font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200 px-4 py-2 border rounded-md">
                     View Users
                 </x-navlink>
             </div>

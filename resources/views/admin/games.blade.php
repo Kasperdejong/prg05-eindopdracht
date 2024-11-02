@@ -29,8 +29,8 @@
                     </td>
                     <td class="px-4 py-2 border">
                         <!-- Edit and Delete buttons -->
-                        <a href="{{ route('games.show', $game->id) }}" class="bg-blue-500 text-white px-3 py-1 rounded">Details</a>
-                        <a href="{{ route('games.edit', $game->id) }}" class="bg-blue-500 text-white px-3 py-1 rounded">Edit</a>
+                        <a href="{{ route('games.show', $game->id) }}" class="bg-blue-500 no-underline text-white px-3 py-1 rounded">Details</a>
+                        <a href="{{ route('games.edit', $game->id) }}" class="bg-blue-500 no-underline text-white px-3 py-1 rounded">Edit</a>
                         <form action="{{ route('games.destroy', $game->id) }}" method="POST" class="inline-block">
                             @csrf
                             @method('DELETE')
