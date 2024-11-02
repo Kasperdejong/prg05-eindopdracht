@@ -1,6 +1,5 @@
 <x-app-layout>
     <x-layout title="About Us">
-        <!-- Header -->
         <header class="bg-indigo-600 text-white py-6">
             <div class="container mx-auto text-center">
                 <h1 class="text-4xl font-bold">About Us</h1>
@@ -8,7 +7,6 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="container mx-auto my-10 px-4">
             <section class="mb-8">
                 <h2 class="text-3xl font-semibold text-gray-800 mb-4">Our Mission</h2>

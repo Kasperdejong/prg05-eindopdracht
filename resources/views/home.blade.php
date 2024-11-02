@@ -1,7 +1,6 @@
 <x-app-layout>
     <x-layout title="home">
 
-        <!-- Header -->
         <header class="bg-indigo-600 text-white py-4">
             <div class="container mx-auto text-center">
                 <h1 class="text-3xl font-bold">Welcome to Game Vault!</h1>
@@ -9,7 +8,6 @@
             </div>
         </header>
 
-        <!-- Auth/Guest Messages -->
         <div class="container mx-auto my-4 text-center">
             @auth()
                 <p class="text-lg font-semibold text-green-500">You are logged in. Enjoy exploring!</p>
@@ -23,7 +21,6 @@
 
 </x-carousel>
 
-        <!-- Main Content -->
         <main class="container mx-auto my-8">
             <div class="text-center">
                 <h2 class="text-2xl font-semibold">About Our Site</h2>
@@ -31,7 +28,6 @@
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="bg-gray-800 text-white py-4">
             <div class="container mx-auto text-center">
                 <p>&copy; 2024 Game Vault. All rights reserved.</p>

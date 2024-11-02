@@ -18,11 +18,6 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-//        if (!auth()->check()) {
-//            if ($request->route()->getName() !== 'login') {
-//                return redirect()->route('login')->with('error', 'Je moet ingelogd zijn om toegang te krijgen.');
-//            }
-//        }
 
         if (\Auth::check() && \Auth::user()->role !== 1) {
             return redirect()->route('home')->with('error', 'Je hebt geen toegang tot deze pagina.');

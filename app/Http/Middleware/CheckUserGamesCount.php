@@ -17,7 +17,6 @@ class CheckUserGamesCount
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Check if the user is logged in
         if (auth()->check()) {
             $userGamesCount = Game::where('user_id', auth()->id())->count();
             if ($userGamesCount < 3) {

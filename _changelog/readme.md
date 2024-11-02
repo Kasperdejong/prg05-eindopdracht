@@ -4,6 +4,7 @@ Hopelijk laatste errors gefixt als je niet bent ingelogd en naar pages deeplinkt
 Ook nog wat styling gedaan van alle links en foto van mezelf in about-us 
 en een link naar register gemaakt in de login page want dat vond ik nodig voor de usability.
 Ook admin en secret page routes in web.php in de auth middleware geplaatst voor beveiliging.
+Code opgeschoond voor de inlevering
 
 
 ## Vrijdag 1 November

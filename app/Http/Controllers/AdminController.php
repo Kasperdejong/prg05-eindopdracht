@@ -14,7 +14,7 @@ class AdminController extends Controller {
     }
     public function manageGames()
     {
-        $games = Game::all(); // Fetch all games
+        $games = Game::all();
         return view('admin.games', compact('games'));
     }
 
