@@ -4,7 +4,7 @@
         <header class="bg-indigo-600 text-white py-6">
             <div class="container mx-auto text-center">
                 <h1 class="text-4xl font-bold">About Us</h1>
-                <p class="mt-2 text-lg">Get to know the mission and team behind The Share Your Favorite Video Games Site.</p>
+                <p class="mt-2 text-lg">Get to know the mission and team behind Game Vault.</p>
             </div>
         </header>
 
@@ -13,7 +13,7 @@
             <section class="mb-8">
                 <h2 class="text-3xl font-semibold text-gray-800 mb-4">Our Mission</h2>
                 <p class="text-gray-700 leading-relaxed">
-                    At The Share Your Favorite Video Games Site, we are passionate about connecting gamers from around the world. We believe that everyone has a unique taste in games, and our platform allows users to share their personal favorites and explore new titles based on their preferences. Whether you love epic RPGs, fast-paced shooters, or indie puzzle games, our site is your gateway to discovering the next game that will capture your interest.
+                    At Game Vault, we are passionate about connecting gamers from around the world. We believe that everyone has a unique taste in games, and our platform allows users to share their personal favorites and explore new titles based on their preferences. Whether you love epic RPGs, fast-paced shooters, or indie puzzle games, our site is your gateway to discovering the next game that will capture your interest.
                 </p>
             </section>
 
@@ -40,12 +40,17 @@
                     Whether you're a casual gamer or a hardcore fan, we invite you to join our platform and become a part of our growing community. Share, discover, and celebrate the world of gaming with us!
                 </p>
             </section>
+
+            <section>
+                <h2>Deze website is gemaakt door CMGT student Kasper de Jong</h2>
+                <img src="{{ asset('ikophetstrand.jpg') }}" alt="demaker" class="w-1/4 ">
+            </section>
+
         </main>
 
-        <!-- Footer -->
         <footer class="bg-gray-800 text-white py-4">
             <div class="container mx-auto text-center">
-                <p>&copy; 2024 The Share Your Favorite Video Games Site. All rights reserved.</p>
+                <p>&copy; 2024 Game Vault. All rights reserved.</p>
             </div>
         </footer>
     </x-layout>

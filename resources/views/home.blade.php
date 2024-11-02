@@ -4,7 +4,7 @@
         <!-- Header -->
         <header class="bg-indigo-600 text-white py-4">
             <div class="container mx-auto text-center">
-                <h1 class="text-3xl font-bold">Welcome to The Share Your Favorite Video Games Site!</h1>
+                <h1 class="text-3xl font-bold">Welcome to Game Vault!</h1>
                 <p class="mt-2 text-lg">Discover and share your favorite games with a community of enthusiasts.</p>
             </div>
         </header>
@@ -34,7 +34,7 @@
         <!-- Footer -->
         <footer class="bg-gray-800 text-white py-4">
             <div class="container mx-auto text-center">
-                <p>&copy; 2024 The Share Your Favorite Video Games Site. All rights reserved.</p>
+                <p>&copy; 2024 Game Vault. All rights reserved.</p>
             </div>
         </footer>
 

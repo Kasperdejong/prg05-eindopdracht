@@ -33,8 +33,6 @@ class GameController extends Controller
         }
 
 
-
-
         if ($request->filled('genre_id')) {
             $gameQuery->where('genre_id', $request->input('genre_id'));
         }

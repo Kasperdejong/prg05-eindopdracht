@@ -21,7 +21,7 @@
 
         <div class="mb-6">
             @if($game->link)
-                <a href="{{ $game->link }}" target="_blank" class="text-indigo-500 hover:text-indigo-700 text-xl font-medium">
+                <a href="{{ $game->link }}" target="_blank" class="text-indigo-500 no-underline hover:text-indigo-700 text-xl font-medium">
                     Visit Game Page
                 </a>
             @else
@@ -30,9 +30,10 @@
         </div>
 
         <div class="flex justify-between items-center mt-8">
-            <a href="{{ route('games.index') }}" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">
+            <a href="{{ route('games.index') }}" class="bg-gray-500 no-underline text-white py-2 px-4 rounded-lg hover:bg-gray-600">
                 Back to Games List
             </a>
+        </div>
 
         <div class="flex justify-between items-center mt-8">
             <form action="{{ route('games.destroy', $game->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this game?');">
