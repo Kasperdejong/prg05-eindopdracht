@@ -181,50 +181,6 @@ programmeer lessen.
 
 
 
-# Hulp bij maken van changelog
-
-Noteer je bevindingen.
-Welke acties heb je ondernomen?
-Noem je bronnen.
-Wat verliep goed? Wat was lastig?
-Wat heb je geleerd?
-Gebruik screenshots om je bevindingen te ondersteunen.
-🗣️ Noteer de feedback die je van je docent hebt gekregen.
 
 
 
-
-
-# H1
-
-3 of meer posts voor diepere validatie
-
-MAAK ROLE 1 ADMIN in de database. ALLEEN IK MAG KIEZEN WIE ADMIN IS.
-standaard user is 2 en die kan dit niet.
-  
-{{ $slot }} doet AUTOMATISCH HTMLentities, dus beveiling tegen cross side scripting
-
-? : notatie is een if else maar dan CLEAN
-let op je migrations. Als je geen product_id hebt of dat tabel niet
-heb kan je ook geen review table maken waarin je het product_id nodig hebt.
-
-OWASP: Hoe regelt LARAVEL deze security
-
-pas op met cascadeOnDelete, want je kan het niet terugkrijgen.
-maar als je bijvoorbeeld reviews van een verwijderd product wilt wegdoen is het handig.
-
-@csrf voor formulier als je error krijgt 419 page expired.
-En het beveiligd.
-zet dit gewoon boven de form het hoeft nergens in.
-
-dd voor checken van forms en andere zaken op de website
-dd($request)
-dd($jouwdingetje)
-
-hou config dicht hoge kans dat die niet gebruikt hoeft te worden
-en NIKS doen met node_modules. Dit zijn gegenereerde bestanden
-voor de werking van de map.
-tests kunnen we negeren op deze opleiding NOOIT openen.
- * opsomming
- * sdfsds
- 
